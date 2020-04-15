@@ -4,6 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const writerRoute = require('./routes/writer.route');
+const templateRoute = require('./routes/template.route');
 
 const app = express();
 const port = 5000;
@@ -11,6 +12,7 @@ const port = 5000;
 app.use(express.json());
 app.use(cors());
 app.use('/writers', writerRoute);
+app.use('/templates', templateRoute);
 
 const uri = process.env.ATLAS_URI;
 
