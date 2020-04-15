@@ -10,7 +10,7 @@ const port = 5000;
 
 app.use(express.json());
 app.use(cors());
-app.use('/writer', writerRoute);
+app.use('/writers', writerRoute);
 
 const uri = process.env.ATLAS_URI;
 
